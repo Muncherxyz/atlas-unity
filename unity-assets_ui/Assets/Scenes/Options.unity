@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 81200975}
   - component: {fileID: 81200974}
   m_Layer: 5
-  m_Name: BGM
+  m_Name: BGMText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 491196220}
   - component: {fileID: 491196219}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2372,7 +2372,7 @@ GameObject:
   - component: {fileID: 2022601412}
   - component: {fileID: 2022601411}
   m_Layer: 5
-  m_Name: BGM
+  m_Name: SFXText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
