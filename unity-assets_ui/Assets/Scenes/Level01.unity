@@ -6319,7 +6319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2110000789417778057, guid: b62d6401cf3bb46428d683425433a5b3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6876776155272500912, guid: b62d6401cf3bb46428d683425433a5b3, type: 3}
       propertyPath: m_Pivot.x
@@ -6497,6 +6497,10 @@ PrefabInstance:
     - target: {fileID: 4582286419571590253, guid: ea46147da989b904eb30c62c03365500, type: 3}
       propertyPath: m_Name
       value: WinCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582286419571590253, guid: ea46147da989b904eb30c62c03365500, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
