@@ -5834,6 +5834,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1553438906}
   m_SourcePrefab: {fileID: 100100000, guid: fc5d73c928198584b80dbfae75e127f9, type: 3}
+--- !u!1 &1989604632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2110000789417778057, guid: b62d6401cf3bb46428d683425433a5b3, type: 3}
+  m_PrefabInstance: {fileID: 4017248733831460967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2045403164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6321,6 +6326,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5054534915261074633, guid: b62d6401cf3bb46428d683425433a5b3, type: 3}
+      propertyPath: PauseCanvas
+      value: 
+      objectReference: {fileID: 1989604632}
     - target: {fileID: 6876776155272500912, guid: b62d6401cf3bb46428d683425433a5b3, type: 3}
       propertyPath: m_Pivot.x
       value: 0
