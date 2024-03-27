@@ -6147,18 +6147,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8585702045701603846, guid: 5ed8481c131fafe448c70b4d4866a06c, type: 3}
-      propertyPath: threshold
-      value: -100
-      objectReference: {fileID: 0}
-    - target: {fileID: -5008005105138805958, guid: 5ed8481c131fafe448c70b4d4866a06c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -5008005105138805958, guid: 5ed8481c131fafe448c70b4d4866a06c, type: 3}
       propertyPath: timerText
       value: 
       objectReference: {fileID: 21039749}
+    - target: {fileID: 1156363544561313359, guid: 5ed8481c131fafe448c70b4d4866a06c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cd0dd33bf5afbb841a901534885af87a, type: 2}
     - target: {fileID: 1382767982808783453, guid: 5ed8481c131fafe448c70b4d4866a06c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.997742
@@ -6199,16 +6195,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5595659849796183695, guid: 5ed8481c131fafe448c70b4d4866a06c, type: 3}
+      propertyPath: m_Name
+      value: ty
+      objectReference: {fileID: 0}
     - target: {fileID: 5702907507875875786, guid: 5ed8481c131fafe448c70b4d4866a06c, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5702907507875875786, guid: 5ed8481c131fafe448c70b4d4866a06c, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
