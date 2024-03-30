@@ -42,6 +42,12 @@ public class PlayerController : MonoBehaviour
             if(Input.GetButton("Jump"))
             {
                 mvng.y = jmpFrc;
+                tyAnimator.SetBool("IsJump", true);
+            }
+            else
+            {
+                tyAnimator.SetBool("IsJump", false);
+
             }
         }
 
