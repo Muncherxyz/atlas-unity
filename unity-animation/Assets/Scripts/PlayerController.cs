@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     public float threshold;
     CharacterController myCharController;
+    Animator tyAnimator;
 
     private float speed = 10f;
     private float jmpFrc = 10f;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         myCharController = GetComponent<CharacterController>();
+        tyAnimator = GetComponentInChildren<Animator>();
         mvng = Vector3.zero;   
     }
 
@@ -33,6 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         if(myCharController.isGrounded)
         {
+
             mvng = new Vector3(Input.GetAxis("Horizontal"),0f, Input.GetAxis("Vertical"));
             mvng *= speed;
             mvng = transform.rotation * mvng;
@@ -40,6 +43,15 @@ public class PlayerController : MonoBehaviour
             {
                 mvng.y = jmpFrc;
             }
+        }
+
+        if (myCharController.velocity.x != 0)
+        {
+            tyAnimator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            tyAnimator.SetBool("IsRunning", false);
         }
         mvng.y -= gravity * Time.deltaTime;
 
