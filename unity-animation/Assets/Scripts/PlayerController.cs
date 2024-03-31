@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
                 tyAnimator.SetBool("IsJump", false);
 
             }
+            tyAnimator.SetBool("IsFalling", false);
         }
 
         if (myCharController.velocity.x != 0)
@@ -65,6 +66,7 @@ public class PlayerController : MonoBehaviour
 
         if(transform.position.y < threshold)
         {
+            tyAnimator.SetBool("IsFalling", true);
             transform.position = new Vector3(0f, 25f, 0f);
             
         }
