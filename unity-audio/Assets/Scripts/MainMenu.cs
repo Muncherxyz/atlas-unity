@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioSource buttonClick;
     public void LevelSelect(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -14,5 +15,10 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Exited");
+    }
+
+    public void Click()
+    {
+        buttonClick.Play();
     }
 }
