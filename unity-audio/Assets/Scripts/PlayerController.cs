@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
 
     private float duration = .5f;
 
+    public AudioSource footSteps;
+
     void Start()
     {
         myCharController = GetComponent<CharacterController>();
@@ -43,6 +45,7 @@ public class PlayerController : MonoBehaviour
             {
                 mvng.y = jmpFrc;
                 tyAnimator.SetBool("IsJump", true);
+                footSteps.enabled = false;
             }
             else
             {
@@ -55,10 +58,13 @@ public class PlayerController : MonoBehaviour
         if (myCharController.velocity.x != 0)
         {
             tyAnimator.SetBool("IsRunning", true);
+            footSteps.enabled = true;
+            
         }
         else
         {
             tyAnimator.SetBool("IsRunning", false);
+            footSteps.enabled = false;
         }
         mvng.y -= gravity * Time.deltaTime;
 
@@ -71,7 +77,6 @@ public class PlayerController : MonoBehaviour
             
         }
     }
-
 
 
     void Rotation()
