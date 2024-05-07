@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseScript : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
     public GameObject PauseCanvas;
+    private bool GameIsPaused = false;
 
-    void Update()
+    public void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
@@ -20,18 +21,22 @@ public class PauseScript : MonoBehaviour
             }
         }
     }
+    public void Pause()
+    {
+        PauseCanvas.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
 
-    void Resume()
+   public void Resume()
     {
         PauseCanvas.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
-    void Pause()
+    public void Options()
     {
-        PauseCanvas.SetActive(true);
-        Time.timeScale = 0f;
-        GameIsPaused = true;
+        SceneManager.LoadScene("Options");
     }
 }

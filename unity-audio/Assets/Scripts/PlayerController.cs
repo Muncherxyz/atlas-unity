@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
             {
                 mvng.y = jmpFrc;
                 tyAnimator.SetBool("IsJump", true);
-                footSteps.enabled = false;
+
             }
             else
             {
@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
         if(transform.position.y < threshold)
         {
             tyAnimator.SetBool("IsFalling", true);
+            footSteps.enabled = false;
             transform.position = new Vector3(0f, 25f, 0f);
             
         }
