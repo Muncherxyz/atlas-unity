@@ -1,15 +1,17 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-//My directives above
-
 public class PlaneSelectionManager : MonoBehaviour
 {
     public ARRaycastManager raycastManager;
     public ARPlaneManager planeManager;
     public GameObject startCanvas;
     private ARPlane selectedPlane = null;
+
     void Update()
     {
         if (selectedPlane == null && Input.touchCount > 0)
@@ -23,8 +25,10 @@ public class PlaneSelectionManager : MonoBehaviour
                     ARRaycastHit hit = hits[0];
                     selectedPlane = hit.trackable as ARPlane;
 
+
                     // Activate the canvas
                     startCanvas.SetActive(true);
+
 
                     // Disable the ARPlaneManager and the visual representation of all planes
                     planeManager.enabled = false;
@@ -39,4 +43,15 @@ public class PlaneSelectionManager : MonoBehaviour
             }
         }
     }
+
+public ARPlane selectedPlaneGetter()
+{
+    
+    
+    if(!selectedPlane)
+    {
+        throw new Exception("No plane selected");
+    }
+    return selectedPlane;
+}
 }
